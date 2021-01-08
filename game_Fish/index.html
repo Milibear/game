@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fish</title>
+    <style>
+        body{
+            padding-top:10px;
+        }
+        .all_bg{
+            width:800px;
+            height:600px;
+            margin:0 auto;/*水平居中*/
+        }
+        /* 父元素 */
+        .all_canvas{
+            position:relative;
+            width:800px;
+            height:600px;
+            margin:0px;
+            border: 1px solid red;
+        }
+        /* 子元素 */
+        #canvas1{
+            position:absolute;
+            /* 配合定位设置的宽高，不会和画布设置的宽高冲突 */
+            width: 800px;
+            height: 600px;
+            /* 此画布在前 */
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+        }
+        #canvas2{
+            position:absolute;
+            width: 800px;
+            height: 600px;
+            /* 此画布在后*/
+            z-index: 2;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 最外层 背景 -->
+    <div class="all_bg">
+        <!-- 所有画布 -->
+        <div class="all_canvas">
+            <!-- 前面画布 -->
+            <canvas id="canvas1" width="800px" height="600px"></canvas>
+            <!-- 后面画布 -->
+            <canvas id="canvas2" width="800px" height="600px"></canvas>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/commonFunctions.js"></script>
+    <script src="js/ane.js"></script>
+    
+</body>
+</html>
