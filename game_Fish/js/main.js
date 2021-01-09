@@ -28,7 +28,6 @@ function init(){
     // 创建背景图片对象并下载
     bgPic = new Image();
     bgPic.src = "src/background.jpg";
-    console.log(bgPic);
     // 创建海葵对象并且调用初始化函数
     ane = new aneObj();
     ane.init();
