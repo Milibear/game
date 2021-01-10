@@ -7,6 +7,7 @@ var canWidth = 0;//画布宽度
 var canHeight = 0;//画布高度
 var bgPic = null; // 创建全局变量保存背景图片
 var  ane = null;// 创建全局变量保存海葵对象
+var food = null;//创建全局变量保存食物对象
 
 // 2.创建入口函数game
 function game(){
@@ -31,6 +32,9 @@ function init(){
     // 创建海葵对象并且调用初始化函数
     ane = new aneObj();
     ane.init();
+    // 创建食物对象并且调用初始化函数
+    food = new foodObj();
+    food.init();
 }
 
 // 4.创建绘制角色函数gameloop
@@ -41,6 +45,10 @@ function gameloop(){
     drawBackground();
     // 调用绘制海葵函数
     ane.draw();
+    // 调用绘制食物的函数
+    food.draw();
+    // 调用监听画布方法
+    foodMoniter();
 }
 // 5.body加载完成之后调用game函数
 document.body.onload = game;
