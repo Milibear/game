@@ -1,3 +1,4 @@
+// 定时器
 window.requestAnimFrame = (function() {
 	return window.requestAnimationFrame ||
 	 window.webkitRequestAnimationFrame || 
@@ -9,7 +10,7 @@ window.requestAnimFrame = (function() {
 		};
 })();
 
-
+// 两点之间距离计算的函数
 function calLength2(x1, y1, x2, y2) {
 	return Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2);
 }

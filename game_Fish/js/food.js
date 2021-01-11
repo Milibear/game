@@ -100,7 +100,5 @@ foodObj.prototype.born = function(i){
     this.foodType[i] =Math.random() <0.9 ? "blue":"orange" ;
     // 产出的位置（产出在哪个海葵）
     this.aneNo[i] = Math.floor(Math.random()*ane.num);
-    console.log(i);
-
 }
 // 在main.js gameloop中调用y函数
